@@ -13,7 +13,7 @@
 	<h2>
 		<?php _e( 'データ削除ツール', 'wpdatadestroyer' ); ?>
 	</h2>
-	<form name="form1" method="post">
+	<form name="form1" method="post" onsubmit="return window.confirm('Delete all?')">
 		<hr />
 		<p class="submit">
 			<input type="submit" name="Submit" value="<?php _e( 'Delete' ); ?>" />
