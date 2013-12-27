@@ -42,21 +42,28 @@ class WPDataDestroyerPlugin
 	// Callback from sub-menu. (filter callback)
 	function admin_submenu()
 	{
-		if ( $_POST['Submit'] == _x('Delete') ) {
+		if ( strcasecmp( $_SERVER['REQUEST_METHOD'], 'post' ) == 0 ) {
+			if ( $_POST['Submit'] == _x('Delete') ) {
 
-			$this->_delete_posts();
-			
-			$this->_delete_pages();
-			
-			$this->_delete_attachments();
-			
-			$this->_delete_nav_menus();
+/*
+				$this->_delete_posts();
 
-			$this->_delete_categories();
+				$this->_delete_pages();
 
-			$this->_delete_tags();
+				$this->_delete_attachments();
 
-			wp_reset_postdata();
+				$this->_delete_nav_menus();
+
+				$this->_delete_categories();
+
+				$this->_delete_tags();
+*/
+
+				$this->_delete_custom_posts();
+
+				wp_reset_postdata();
+			}
+		} elseif ( strcasecmp( $_SERVER['REQUEST_METHOD'], 'get' ) == 0 ) {
 		}
 
 		include 'admin/submenu.php';
@@ -68,11 +75,11 @@ class WPDataDestroyerPlugin
 		$deleted = 0;
 
 		while ( true ) {
-			$q = new WP_Query(array(
+			$q = new WP_Query( array(
 				'post_type'			=> 'post',
 				'post_status'		=> 'any',
 				'posts_per_page'	=> 10,
-			));
+			) );
 			if ( !$q->have_posts() ) {
 				break;
 			} else {
@@ -96,11 +103,11 @@ class WPDataDestroyerPlugin
 		$deleted = 0;
 
 		while ( true ) {
-			$q = new WP_Query(array(
+			$q = new WP_Query( array(
 				'post_type'			=> 'page',
 				'post_status'		=> 'any',
 				'posts_per_page'	=> 10,
-			));
+			) );
 			if ( !$q->have_posts() ) {
 				break;
 			} else {
@@ -124,11 +131,11 @@ class WPDataDestroyerPlugin
 		$deleted = 0;
 
 		while ( true ) {
-			$q = new WP_Query(array(
+			$q = new WP_Query( array(
 				'post_type'			=> 'attachment',
 				'post_status'		=> 'any',
 				'posts_per_page'	=> 10,
-			));
+			) );
 			if ( !$q->have_posts() ) {
 				break;
 			} else {
@@ -166,7 +173,7 @@ class WPDataDestroyerPlugin
 	// Delete for 'category'.
 	private function _delete_categories()
 	{
-		$categories = get_categories(array(
+		$categories = get_categories( array(
 			'type'                     => 'post',
 			'child_of'                 => 0,
 			'parent'                   => '',
@@ -179,12 +186,12 @@ class WPDataDestroyerPlugin
 			'number'                   => '',
 			'taxonomy'                 => 'category',
 			'pad_counts'               => false 
-		));
+		) );
 		if ( $categories ) {
 			$deleted = 0;
 			$is_default = false;
 			foreach ( $categories as $category ) {
-				if ( !wp_delete_category($category->cat_ID) ) {
+				if ( !wp_delete_category( $category->cat_ID ) ) {
 					if ( get_option( 'default_category' ) == $category->cat_ID ) {
 						$is_default = true;
 					}
@@ -193,7 +200,7 @@ class WPDataDestroyerPlugin
 				}
 			}
 			if ( $deleted ) {
-				$this->flash_msgs[] = sprintf( __( "Deleted the category(s) of %d.", 'wpdatadestroyer' ), $deleted);
+				$this->flash_msgs[] = sprintf( __( "Deleted the category(s) of %d.", 'wpdatadestroyer' ), $deleted );
 			}
 			if ( $is_default ) {
 				$this->flash_msgs[] = sprintf( __( "Notice: Cannot delete 'Default Category'.", 'wpdatadestroyer' ) );
@@ -204,7 +211,7 @@ class WPDataDestroyerPlugin
 	// Delete for 'tag'.
 	private function _delete_tags()
 	{
-		$tags = get_tags(array(
+		$tags = get_tags( array(
 			'orderby'				=> 'name',
 			'order'					=> 'ASC',
 			'hide_empty'			=> false,
@@ -221,7 +228,7 @@ class WPDataDestroyerPlugin
 			'get'					=> '',
 			'child_of'				=> '',
 			'parent'				=> '',
-		));
+		) );
 		if ( $tags ) {
 			$deleted = 0;
 			foreach ( $tags as $tag ) {
@@ -234,6 +241,42 @@ class WPDataDestroyerPlugin
 			}
 		}
 	}
+
+	// Delete for custom posts.
+	private function _delete_custom_posts()
+	{
+		$deleted = 0;
+		
+		$post_types = get_post_types( array(
+			'public'	=> true,
+			'_builtin'	=> false,
+		) );
+
+		foreach ( $post_types as $post_type ) {
+			while ( true ) {
+				$q = new WP_Query( array(
+					'post_type'			=> $post_type,
+					'post_status'		=> 'any',
+					'posts_per_page'	=> 10,
+				) );
+				if ( !$q->have_posts() ) {
+					break;
+				} else {
+					do {
+						$q->the_post();
+						if ( wp_delete_post( $q->post->ID, true ) ) {
+							++$deleted;
+						}
+					} while ( $q->have_posts() );
+				}
+			}
+		}
+
+		if ( $deleted ) {
+			$this->flash_msgs[] = sprintf( __( "Deleted the custom post(s) of %d.", 'wpdatadestroyer' ), $deleted);
+		}
+	}
+	
 }
 
 $wpdatadestroyer = new WPDataDestroyerPlugin();
