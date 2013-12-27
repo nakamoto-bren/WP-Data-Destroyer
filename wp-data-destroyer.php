@@ -45,7 +45,6 @@ class WPDataDestroyerPlugin
 		if ( strcasecmp( $_SERVER['REQUEST_METHOD'], 'post' ) == 0 ) {
 			if ( $_POST['Submit'] == _x('Delete') ) {
 
-/*
 				$this->_delete_posts();
 
 				$this->_delete_pages();
@@ -57,7 +56,6 @@ class WPDataDestroyerPlugin
 				$this->_delete_categories();
 
 				$this->_delete_tags();
-*/
 
 				$this->_delete_custom_posts();
 
