@@ -246,8 +246,8 @@ class WPDataDestroyerPlugin
 		$deleted = 0;
 		
 		$post_types = get_post_types( array(
-			'public'	=> true,
-			'_builtin'	=> false,
+			'public'		=> true,
+			'_builtin'		=> false,
 		) );
 
 		foreach ( $post_types as $post_type ) {
