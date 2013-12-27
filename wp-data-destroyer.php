@@ -91,7 +91,7 @@ class WPDataDestroyerPlugin
 		}
 
 		if ( $deleted ) {
-			$this->flash_msgs[] = sprintf( __( "Deleted the post(s) of %d.", 'wpdatadestroyer' ), $deleted);
+			$this->flash_msgs[] = sprintf( __( "Deleted the post(s) of %d.", 'wpdatadestroyer' ), $deleted );
 		}
 	}
 	
@@ -119,7 +119,7 @@ class WPDataDestroyerPlugin
 		}
 
 		if ( $deleted ) {
-			$this->flash_msgs[] = sprintf( __( "Deleted the page(s) of %d.", 'wpdatadestroyer' ), $deleted);
+			$this->flash_msgs[] = sprintf( __( "Deleted the page(s) of %d.", 'wpdatadestroyer' ), $deleted );
 		}
 	}
 
@@ -147,7 +147,7 @@ class WPDataDestroyerPlugin
 		}
 
 		if ( $deleted ) {
-			$this->flash_msgs[] = sprintf( __( "Deleted the attachment(s) of %d.", 'wpdatadestroyer' ), $deleted);
+			$this->flash_msgs[] = sprintf( __( "Deleted the attachment(s) of %d.", 'wpdatadestroyer' ), $deleted );
 		}
 	}
 
@@ -163,7 +163,7 @@ class WPDataDestroyerPlugin
 				}
 			}
 			if ( $deleted ) {
-				$this->flash_msgs[] = sprintf( __( "Deleted the nav-menu(s) of %d.", 'wpdatadestroyer' ), $deleted);
+				$this->flash_msgs[] = sprintf( __( "Deleted the nav-menu(s) of %d.", 'wpdatadestroyer' ), $deleted );
 			}
 		}
 	}
@@ -235,7 +235,7 @@ class WPDataDestroyerPlugin
 				}
 			}
 			if ( $deleted ) {
-				$this->flash_msgs[] = sprintf( __( "Deleted the tag(s) of %d.", 'wpdatadestroyer' ), $deleted);
+				$this->flash_msgs[] = sprintf( __( "Deleted the tag(s) of %d.", 'wpdatadestroyer' ), $deleted );
 			}
 		}
 	}
@@ -271,7 +271,7 @@ class WPDataDestroyerPlugin
 		}
 
 		if ( $deleted ) {
-			$this->flash_msgs[] = sprintf( __( "Deleted the custom post(s) of %d.", 'wpdatadestroyer' ), $deleted);
+			$this->flash_msgs[] = sprintf( __( "Deleted the custom post(s) of %d.", 'wpdatadestroyer' ), $deleted );
 		}
 	}
 	
