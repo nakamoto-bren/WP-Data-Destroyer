@@ -31,7 +31,7 @@ class WPDataDestroyerPlugin
 	public function fire()
 	{
 		// Add filter for menu.
-		add_action( 'admin_menu', array( &$this, 'admin_menu' ) );
+		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 	}
 
 	//
@@ -69,7 +69,6 @@ class WPDataDestroyerPlugin
 				}
 			}
 		} elseif ( strcasecmp( $_SERVER['REQUEST_METHOD'], 'get' ) == 0 ) {
-			var_dump( get_option( 'active_plugins' ) );
 		}
 
 		include 'admin/submenu.php';

@@ -3,7 +3,7 @@
 
 <?php if ( $wpdatadestroyer->flash_msgs ) : ?>
 	<div class="updated">
-		<?php	foreach ($wpdatadestroyer->flash_msgs as $flash_msg) : ?>
+		<?php foreach ($wpdatadestroyer->flash_msgs as $flash_msg) : ?>
 			<p><strong><?php echo $flash_msg; ?></strong></p>
 		<?php endforeach; ?>
 	</div>
