@@ -20,11 +20,16 @@ class WPDataDestroyerPlugin
 	//
 	//		Initialization.
 	//
-	
+
 	public function __construct()
 	{
+		// Initialize message array.
 		$this->flash_msgs = array();
+	}
 
+	// execute this plugin.
+	public function fire()
+	{
 		// Add filter for menu.
 		add_action( 'admin_menu', array( &$this, 'admin_menu' ) );
 	}
@@ -43,25 +48,28 @@ class WPDataDestroyerPlugin
 	function admin_submenu()
 	{
 		if ( strcasecmp( $_SERVER['REQUEST_METHOD'], 'post' ) == 0 ) {
-			if ( $_POST['Submit'] == _x('Delete') ) {
+			if ( check_admin_referer( 'wpdatadestroyer_deleteall' ) ) {
+				if ( $_POST['Submit'] == _x('Delete') ) {
 
-				$this->_delete_posts();
+					$this->_delete_posts();
 
-				$this->_delete_pages();
+					$this->_delete_pages();
 
-				$this->_delete_attachments();
+					$this->_delete_attachments();
 
-				$this->_delete_nav_menus();
+					$this->_delete_nav_menus();
 
-				$this->_delete_categories();
+					$this->_delete_categories();
 
-				$this->_delete_tags();
+					$this->_delete_tags();
 
-				$this->_delete_custom_posts();
+					$this->_delete_custom_posts();
 
-				wp_reset_postdata();
+					wp_reset_postdata();
+				}
 			}
 		} elseif ( strcasecmp( $_SERVER['REQUEST_METHOD'], 'get' ) == 0 ) {
+			var_dump( get_option( 'active_plugins' ) );
 		}
 
 		include 'admin/submenu.php';
@@ -278,4 +286,5 @@ class WPDataDestroyerPlugin
 }
 
 $wpdatadestroyer = new WPDataDestroyerPlugin();
+$wpdatadestroyer->fire();
 
