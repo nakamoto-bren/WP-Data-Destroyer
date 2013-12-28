@@ -14,6 +14,7 @@
 		<?php _e( 'データ削除ツール', 'wpdatadestroyer' ); ?>
 	</h2>
 	<form name="form1" method="post" onsubmit="return window.confirm('Delete all?')">
+		<?php wp_nonce_field( 'wpdatadestroyer_deleteall' ); ?>
 		<hr />
 		<p class="submit">
 			<input type="submit" name="Submit" value="<?php _e( 'Delete' ); ?>" />
