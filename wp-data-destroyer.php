@@ -70,58 +70,62 @@ class WPDataDestroyerPlugin
 	{
 		if ( strcasecmp( $_SERVER['REQUEST_METHOD'], 'post' ) == 0 ) {
 			if ( check_admin_referer( 'wp_data_destroyer_action' ) ) {
-				switch ( $_POST['delete_mode'] ) {
-					case 'all':
+				if ( $_POST['delete_confirm'] !== 'confirm' ) {
+					$this->flash_msgs[] = sprintf( __( "Please check for 'Cofirm'.", $this->text_domain ) );
+				} else {
+					switch ( $_POST['delete_mode'] ) {
+						case 'all':
 
-						$this->_delete_posts();
-
-						$this->_delete_pages();
-
-						$this->_delete_attachments();
-
-						$this->_delete_nav_menus();
-
-						$this->_delete_categories();
-
-						$this->_delete_tags();
-
-						$this->_delete_custom_posts();
-
-						wp_reset_postdata();
-
-						break;
-					
-					case 'selected':
-
-						if ( $_POST['select_post'] == 1) {
 							$this->_delete_posts();
-						}
-						if ( $_POST['select_page'] == 1) {
+
 							$this->_delete_pages();
-						}
-						if ( $_POST['select_attachment'] == 1) {
+
 							$this->_delete_attachments();
-						}
-						if ( $_POST['select_nav_menus'] == 1) {
+
 							$this->_delete_nav_menus();
-						}
-						if ( $_POST['select_categories'] == 1) {
+
 							$this->_delete_categories();
-						}
-						if ( $_POST['select_tags'] == 1) {
+
 							$this->_delete_tags();
-						}
-						if ( $_POST['select_custom_posts'] == 1) {
+
 							$this->_delete_custom_posts();
-						}
 
-						wp_reset_postdata();
+							wp_reset_postdata();
 
-						break;
+							break;
 
-					default:
-						$this->flash_msgs[] = sprintf( __( "No action.", $this->text_domain ) );
-						break;
+						case 'selected':
+
+							if ( $_POST['select_post'] == 1) {
+								$this->_delete_posts();
+							}
+							if ( $_POST['select_page'] == 1) {
+								$this->_delete_pages();
+							}
+							if ( $_POST['select_attachment'] == 1) {
+								$this->_delete_attachments();
+							}
+							if ( $_POST['select_nav_menus'] == 1) {
+								$this->_delete_nav_menus();
+							}
+							if ( $_POST['select_categories'] == 1) {
+								$this->_delete_categories();
+							}
+							if ( $_POST['select_tags'] == 1) {
+								$this->_delete_tags();
+							}
+							if ( $_POST['select_custom_posts'] == 1) {
+								$this->_delete_custom_posts();
+							}
+
+							wp_reset_postdata();
+
+							break;
+
+						default:
+							$this->flash_msgs[] = sprintf( __( "No action.", $this->text_domain ) );
+							break;
+					}
 				}
 			}
 		} elseif ( strcasecmp( $_SERVER['REQUEST_METHOD'], 'get' ) == 0 ) {
@@ -129,6 +133,10 @@ class WPDataDestroyerPlugin
 
 		include 'admin/submenu.php';
 	}
+	
+	//
+	//		Delete functions.
+	//
 
 	/**
 	 *	Delete for 'post'

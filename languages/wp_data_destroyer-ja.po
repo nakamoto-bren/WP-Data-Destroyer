@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Data Destroyer\n"
-"POT-Creation-Date: 2014-06-14 06:52+0900\n"
-"PO-Revision-Date: 2014-06-14 06:52+0900\n"
+"POT-Creation-Date: 2014-06-16 08:08+0900\n"
+"PO-Revision-Date: 2014-06-16 08:08+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -17,8 +17,8 @@ msgstr ""
 "wordpress/wp-content/plugins/wp-data-destroyer\n"
 
 #: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:14
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:55
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:56
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:60
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:61
 msgid "WP Data Destroyer"
 msgstr "データ削除"
 
@@ -87,45 +87,49 @@ msgstr "そして、確認をチェックしてください。"
 msgid "Delete"
 msgstr "削除"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:116
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:74
+msgid "Please check for 'Cofirm'."
+msgstr "'確認'をチェックしてください。"
+
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:126
 msgid "No action."
 msgstr "操作無し"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:150
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:163
 #, php-format
 msgid "Deleted %d post(s)."
 msgstr "投稿を %d 個削除。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:178
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:193
 #, php-format
 msgid "Deleted %d page(s)."
 msgstr "固定ページを %d 個削除。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:206
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:223
 #, php-format
 msgid "Deleted %d attachment(s)."
 msgstr "メディアを %d 個削除。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:222
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:241
 #, php-format
 msgid "Deleted %d nav-menu(s)."
 msgstr "メニューを %d 個削除。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:257
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:278
 #, php-format
 msgid "Deleted %d category(s)."
 msgstr "カテゴリーを %d 個削除。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:260
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:281
 msgid "Notice: Cannot delete 'Default Category'."
 msgstr "お知らせ：　デフォルトカテゴリーは削除できません。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:294
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:317
 #, php-format
 msgid "Deleted %d tag(s)."
 msgstr "タグを %d 個削除。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:330
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:355
 #, php-format
 msgid "Deleted %d custom post(s)."
 msgstr "カスタム投稿を %d 個削除。"
