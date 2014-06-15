@@ -80,16 +80,22 @@
 				</td>
 			</tr>
 
-		</table>
+			<tr>
+				<th scope="row">
+					<label for="delete-confirm">
+						<input type="checkbox" id="delete-confirm" name="delete_confirm" value="confirm">
+						<span><?php _e('Confirm', $this->text_domain) ?></span>
+					</label>
+				</th>
+				<td>
+					<p class="description">
+						<?php _e('Please backup your database before deleting.', $this->text_domain); ?><br>
+						<?php _e('and Please check for Confirm.', $this->text_domain); ?><br>
+					</p>
+				</td>
+			</tr>
 
-		<p class="large-text">
-			<?php _e('Please backup your database before deleting.', $this->text_domain); ?><br>
-			<?php _e('and Please check for confirm button.', $this->text_domain); ?><br>
-			<label>
-				<input type="checkbox" name="delete_confirm" value="cofirm">
-				<?php _e('confirm.', $this->text_domain) ?>
-			</label><br>
-		</p>
+		</table>
 
 		<p class="submit">
 			<input type="submit" name="Submit" class="button button-primary" value="<?php _e( 'Delete', $this->text_domain ); ?>" />
