@@ -1,3 +1,3 @@
-WP-Data-Destroyer
+WP Data Destroyer
 =================
-Delete for post/page/attachment/category/tag/custom-post in WordPress
+Delete for post / page / attachment / category / tag / nav menu / custom posts in WordPress
