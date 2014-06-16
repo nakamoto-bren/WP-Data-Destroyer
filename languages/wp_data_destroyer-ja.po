@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Data Destroyer\n"
-"POT-Creation-Date: 2014-06-16 08:08+0900\n"
-"PO-Revision-Date: 2014-06-16 08:08+0900\n"
+"POT-Creation-Date: 2014-06-16 08:39+0900\n"
+"PO-Revision-Date: 2014-06-16 08:40+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -16,13 +16,13 @@ msgstr ""
 "X-Poedit-SearchPath-0: /Users/kenair/Dropbox/bren/website/WordPress/"
 "wordpress/wp-content/plugins/wp-data-destroyer\n"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:14
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:60
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:61
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:22
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:64
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:65
 msgid "WP Data Destroyer"
 msgstr "データ削除"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:20
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:28
 msgid ""
 "Delete for Post, Page, Attachment, Category(non-default), Tag, Nav Menu, "
 "Custom Posts."
@@ -30,106 +30,109 @@ msgstr ""
 "投稿、固定ページ、メディア、カテゴリー、タグ、メニュー、カスタム投稿を削除し"
 "ます。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:34
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:42
 msgid "Delete for all"
 msgstr "すべて削除"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:38
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:46
 msgid ""
 "Post, Page, Attachment, Category(non-default), Tag, Nav Menu, Custom Posts"
 msgstr "投稿、固定ページ、メディア、カテゴリー、タグ、メニュー、カスタム投稿"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:46
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:54
 msgid "Delete for selected"
 msgstr "選択したものを削除"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:53
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:61
 msgid "Post"
 msgstr "投稿"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:57
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:65
 msgid "Page"
 msgstr "固定ページ"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:61
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:69
 msgid "Attachment"
 msgstr "メディア"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:65
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:73
 msgid "Nav Menu"
 msgstr "メニュー"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:69
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:77
 msgid "Category"
 msgstr "カテゴリー"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:73
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:81
 msgid "Tag"
 msgstr "タグ"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:77
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:85
 msgid "Custom Posts"
 msgstr "カスタム投稿"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:87
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:95
 msgid "Confirm"
 msgstr "確認"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:92
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:100
 msgid "Please backup your database before deleting."
 msgstr "削除する前に、データベースをバックアップしてください。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:93
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:101
 msgid "and Please check for Confirm."
 msgstr "そして、確認をチェックしてください。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:101
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/admin/submenu.php:109
 msgid "Delete"
 msgstr "削除"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:74
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:78
 msgid "Please check for 'Cofirm'."
 msgstr "'確認'をチェックしてください。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:126
-msgid "No action."
-msgstr "操作無し"
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:130
+msgid "Please select for 'all' or 'selected'."
+msgstr "'すべて削除' もしくは '選択したものを削除' を選択してください。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:163
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:171
 #, php-format
 msgid "Deleted %d post(s)."
 msgstr "投稿を %d 個削除。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:193
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:201
 #, php-format
 msgid "Deleted %d page(s)."
 msgstr "固定ページを %d 個削除。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:223
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:231
 #, php-format
 msgid "Deleted %d attachment(s)."
 msgstr "メディアを %d 個削除。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:241
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:249
 #, php-format
 msgid "Deleted %d nav-menu(s)."
 msgstr "メニューを %d 個削除。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:278
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:286
 #, php-format
 msgid "Deleted %d category(s)."
 msgstr "カテゴリーを %d 個削除。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:281
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:289
 msgid "Notice: Cannot delete 'Default Category'."
 msgstr "お知らせ：　デフォルトカテゴリーは削除できません。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:317
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:325
 #, php-format
 msgid "Deleted %d tag(s)."
 msgstr "タグを %d 個削除。"
 
-#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:355
+#: /Users/kenair/Dropbox/bren/website/WordPress/wordpress/wp-content/plugins/wp-data-destroyer/wp-data-destroyer.php:363
 #, php-format
 msgid "Deleted %d custom post(s)."
 msgstr "カスタム投稿を %d 個削除。"
+
+#~ msgid "No action."
+#~ msgstr "操作無し"

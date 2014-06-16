@@ -18,7 +18,9 @@ class WPDataDestroyerPlugin
 	// domain
 	public $text_domain;
 	// result messages
-	public $flash_msgs;
+	public $messages;
+	// error messages
+	public $errors;
 
 	/**
 	 *	Constructor
@@ -27,8 +29,10 @@ class WPDataDestroyerPlugin
 	{
 		// Set the text domain.
 		$this->text_domain = 'wp_data_destroyer';
-		// Initialize for message array.
-		$this->flash_msgs = array();
+		// Initialize for result message array.
+		$this->messages = array();
+		// Initialize for error message array.
+		$this->errors = array();
 	}
 
 	/**
@@ -71,7 +75,7 @@ class WPDataDestroyerPlugin
 		if ( strcasecmp( $_SERVER['REQUEST_METHOD'], 'post' ) == 0 ) {
 			if ( check_admin_referer( 'wp_data_destroyer_action' ) ) {
 				if ( $_POST['delete_confirm'] !== 'confirm' ) {
-					$this->flash_msgs[] = sprintf( __( "Please check for 'Cofirm'.", $this->text_domain ) );
+					$this->errors[] = sprintf( __( "Please check for 'Cofirm'.", $this->text_domain ) );
 				} else {
 					switch ( $_POST['delete_mode'] ) {
 						case 'all':
@@ -123,7 +127,7 @@ class WPDataDestroyerPlugin
 							break;
 
 						default:
-							$this->flash_msgs[] = sprintf( __( "No action.", $this->text_domain ) );
+							$this->errors[] = sprintf( __( "Please select for 'all' or 'selected'.", $this->text_domain ) );
 							break;
 					}
 				}
@@ -164,7 +168,7 @@ class WPDataDestroyerPlugin
 		}
 
 		if ( $deleted ) {
-			$this->flash_msgs[] = sprintf( __( "Deleted %d post(s).", $this->text_domain ), $deleted );
+			$this->messages[] = sprintf( __( "Deleted %d post(s).", $this->text_domain ), $deleted );
 		}
 	}
 	
@@ -194,7 +198,7 @@ class WPDataDestroyerPlugin
 		}
 
 		if ( $deleted ) {
-			$this->flash_msgs[] = sprintf( __( "Deleted %d page(s).", $this->text_domain ), $deleted );
+			$this->messages[] = sprintf( __( "Deleted %d page(s).", $this->text_domain ), $deleted );
 		}
 	}
 
@@ -224,7 +228,7 @@ class WPDataDestroyerPlugin
 		}
 
 		if ( $deleted ) {
-			$this->flash_msgs[] = sprintf( __( "Deleted %d attachment(s).", $this->text_domain ), $deleted );
+			$this->messages[] = sprintf( __( "Deleted %d attachment(s).", $this->text_domain ), $deleted );
 		}
 	}
 
@@ -242,7 +246,7 @@ class WPDataDestroyerPlugin
 				}
 			}
 			if ( $deleted ) {
-				$this->flash_msgs[] = sprintf( __( "Deleted %d nav-menu(s).", $this->text_domain ), $deleted );
+				$this->messages[] = sprintf( __( "Deleted %d nav-menu(s).", $this->text_domain ), $deleted );
 			}
 		}
 	}
@@ -279,10 +283,10 @@ class WPDataDestroyerPlugin
 				}
 			}
 			if ( $deleted ) {
-				$this->flash_msgs[] = sprintf( __( "Deleted %d category(s).", $this->text_domain ), $deleted );
+				$this->messages[] = sprintf( __( "Deleted %d category(s).", $this->text_domain ), $deleted );
 			}
 			if ( $is_default ) {
-				$this->flash_msgs[] = sprintf( __( "Notice: Cannot delete 'Default Category'.", $this->text_domain ) );
+				$this->messages[] = sprintf( __( "Notice: Cannot delete 'Default Category'.", $this->text_domain ) );
 			}
 		}
 	}
@@ -318,7 +322,7 @@ class WPDataDestroyerPlugin
 				}
 			}
 			if ( $deleted ) {
-				$this->flash_msgs[] = sprintf( __( "Deleted %d tag(s).", $this->text_domain ), $deleted );
+				$this->messages[] = sprintf( __( "Deleted %d tag(s).", $this->text_domain ), $deleted );
 			}
 		}
 	}
@@ -356,7 +360,7 @@ class WPDataDestroyerPlugin
 		}
 
 		if ( $deleted ) {
-			$this->flash_msgs[] = sprintf( __( "Deleted %d custom post(s).", $this->text_domain ), $deleted );
+			$this->messages[] = sprintf( __( "Deleted %d custom post(s).", $this->text_domain ), $deleted );
 		}
 	}
 	

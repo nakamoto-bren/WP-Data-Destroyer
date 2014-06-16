@@ -1,10 +1,18 @@
 
 <?php global $wp_data_destroyer; ?>
 
-<?php if ( $wp_data_destroyer->flash_msgs ) : ?>
+<?php if ( $wp_data_destroyer->messages ) : ?>
 	<div class="updated">
-		<?php foreach ($wp_data_destroyer->flash_msgs as $flash_msg) : ?>
+		<?php foreach ($wp_data_destroyer->messages as $flash_msg) : ?>
 			<p><strong><?php echo $flash_msg; ?></strong></p>
+		<?php endforeach; ?>
+	</div>
+<?php endif; ?>
+
+<?php if ( $wp_data_destroyer->errors ) : ?>
+	<div class="updated">
+		<?php foreach ($wp_data_destroyer->errors as $flash_error) : ?>
+			<p class="error-message"><strong><?php echo $flash_error; ?></strong></p>
 		<?php endforeach; ?>
 	</div>
 <?php endif; ?>
