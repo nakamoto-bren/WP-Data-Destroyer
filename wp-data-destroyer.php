@@ -376,8 +376,8 @@ if ( false ) :
 /**
  * Implements example command.
  */
-class Example_Command extends WP_CLI_Command {
-
+class Example_Command extends WP_CLI_Command
+{
 	/**
 	 * Prints a greeting.
 	 * 
